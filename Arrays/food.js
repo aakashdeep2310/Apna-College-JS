@@ -18,3 +18,4 @@ let foodItems = ["Litch", "Mango", "Chips", "kurkure"];
 
 
 console.log(foodItems.slice(1, 3));
+console.log("dldjbvs");
