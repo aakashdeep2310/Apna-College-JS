@@ -23,9 +23,11 @@ const resetGame = () => {
 
 }
 
+let count = 0;
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         // console.log("box was clicked");
+        count++;
         if(turnO){ //player O
             box.innerText = "O";
             turnO = false;
@@ -34,13 +36,17 @@ boxes.forEach((box) => {
             box.innerText = "X";
             turnO = true;
         }
+        
         box.disabled = true;
-
         checkWinner();
+
+        if (count === 9) {
+            drawGame();
+        }
+        
     });
 });
-// let countx = 0;
-// let countBtn = document.querySelectorAll()
+
 
 
 
@@ -61,6 +67,16 @@ const showWinner = (winner) => {
     msgContainer.classList.remove("hide");
     disableBoxes();
 }
+
+const drawGame = () => {
+    msg.innerText = `Match is tied`;
+    msgContainer.classList.remove("hide");
+    disableBoxes();
+
+}
+
+
+
 const checkWinner = () => {
     for(let pattern of winPatterns){
         // console.log(boxes[pattern[0]].innerText,
@@ -76,10 +92,15 @@ const checkWinner = () => {
             if(pos1Val === pos2Val && pos2Val === pos3Val){
                 // console.log("winner", pos1Val);
                 showWinner(pos1Val);
-                // count++;
+                return;
             }
+            
+           
         }
     }
+    // if(count === 9){
+    //     drawGame();
+    // }
 }
 
 newGameBtn.addEventListener("click", resetGame);
