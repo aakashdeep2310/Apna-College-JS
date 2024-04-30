@@ -113,7 +113,12 @@ document.querySelector("body").prepend(button2);
 
 // Q2.
 
+let para = document.querySelector("p");
+// para.setAttribute("class", "newClass");
 
+// we have to use classList not setAttributes
+para.classList.add("newClass"); // color changed to green due to in css i made a newClass 
+para.classList.remove("myclass")
 
 
 
