@@ -1,0 +1,25 @@
+#box{
+    height: 100px;
+    width: 100px;
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+}
+#box:hover{
+    
+    background-color: green;
+    transition: ease-in-out;
+}
+
+.dark{
+    color: white;
+    background-color: black;
+
+}
+.light{
+    color: black;
+    background-color: white;
+}
