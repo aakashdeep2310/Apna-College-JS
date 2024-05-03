@@ -1,0 +1,29 @@
+#heading{
+    background-color: yellow;
+    color: blue;
+}
+
+p{
+    color: red;
+}
+
+.box{
+    background-color: aquamarine;
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.content{
+    color: red;
+    
+}
+
+.newClass{
+    background-color: green;
+}
