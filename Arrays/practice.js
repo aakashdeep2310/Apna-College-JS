@@ -15,6 +15,7 @@ for(let el of arr){
     i++;
 }
 
+
 console.log(arr);
 
 
